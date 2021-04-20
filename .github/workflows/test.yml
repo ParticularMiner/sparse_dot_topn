@@ -39,4 +39,7 @@ jobs:
       run: ${{ matrix.ls_name }}
     
     - name: Run tests
-      run: pytest -ra tests/sparse_dot_topn/
+      run: |
+        pip install pytest
+        pip install pandas
+        pytest -ra tests/sparse_dot_topn/
